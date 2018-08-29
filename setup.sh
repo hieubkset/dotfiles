@@ -8,6 +8,9 @@ for filename in .[a-z]*; do
   fi
 done
 
+ln -s ${PWD}/git-prompt.sh ~/
+ln -s ${PWD}/git-completion.sh ~/
+
 vim +PluginInstall "+mkspell vi vi_VN" +qall
 
 mkdir ~/.vim/spell

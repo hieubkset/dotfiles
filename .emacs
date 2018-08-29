@@ -60,9 +60,9 @@
 ;; --------------------------------------
 
 (elpy-enable)
-(setq elpy-rpc-python-command "python3")
-(elpy-use-cpython "python3")
-(elpy-use-ipython)
+(setenv "IPY_TEST_SIMPLE_PROMPT" "1")
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i")
 
 ;; use flycheck not flymake with elpy
 (when (require 'flycheck nil t)

@@ -15,7 +15,8 @@ if [ "$TERM" == "screen" ] && [ -n "$TMUX" ]; then
   fi
 fi
 
-# Setting PATH for Python 3.5
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
-export PATH
+. ~/git-prompt.sh
+PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\
+\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\W \[\033[35m\]\
+$(__git_ps1 "(%s) ")\[\033[31m\]\[\033[00m\]\$ '
+. ~/git-completion.sh
