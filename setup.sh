@@ -8,6 +8,8 @@ for filename in .[a-z]*; do
   fi
 done
 
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh > git-prompt.sh
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > git-completion.sh
 ln -s ${PWD}/git-prompt.sh ~/
 ln -s ${PWD}/git-completion.sh ~/
 
