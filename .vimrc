@@ -13,7 +13,7 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'davidhalter/jedi-vim'                   " auto-completion stuff
 Plugin 'manhhomienbienthuy/candy.vim'           " Colors!!!
-Plugin 'bling/vim-airline'                      " Status line
+Plugin 'vim-airline/vim-airline'                " Status line
 Plugin 'tpope/vim-rails'                        " Rails.vim
 Plugin 'kchmck/vim-coffee-script'               " Coffeescript
 Plugin 'slim-template/vim-slim'                 " Slim template
