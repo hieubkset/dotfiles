@@ -35,6 +35,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(elpy-modules
    (quote
     (elpy-module-company
@@ -43,26 +44,33 @@
      elpy-module-yasnippet
      elpy-module-django
      elpy-module-sane-defaults)))
+ '(flycheck-python-flake8-executable "/usr/local/bin/flake8")
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (py-autopep8
+     material-theme
+     markdown-mode
+     flycheck elpy
+     ein
+     better-defaults)))
  '(show-paren-mode t)
- '(tool-bar-mode nil)
- '(column-number-mode t))
+ '(tool-bar-mode nil))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 150))))
- )
+ '(default ((t (:height 150)))))
 
 ;; PYTHON CONFIGURATION
 ;; --------------------------------------
 
 (elpy-enable)
 (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
-(setq python-shell-interpreter "ipython"
+(setq python-shell-interpreter "python3"
       python-shell-interpreter-args "-i")
 
 ;; use flycheck not flymake with elpy
