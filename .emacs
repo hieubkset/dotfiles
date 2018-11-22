@@ -29,32 +29,25 @@
 ;; BASIC CUSTOMIZATION
 ;; --------------------------------------
 
-(load-theme 'material t) ;; load material theme
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(custom-enabled-themes (quote (material)))
+ '(custom-safe-themes
+   (quote
+    ("a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" default)))
  '(elpy-modules
    (quote
-    (elpy-module-company
-     elpy-module-eldoc
-     elpy-module-pyvenv
-     elpy-module-yasnippet
-     elpy-module-django
-     elpy-module-sane-defaults)))
+    (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
  '(flycheck-python-flake8-executable "/usr/local/bin/flake8")
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (py-autopep8
-     material-theme
-     markdown-mode
-     flycheck elpy
-     ein
-     better-defaults)))
+    (py-autopep8 material-theme markdown-mode flycheck elpy ein better-defaults)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 
@@ -89,5 +82,6 @@
   "Major mode for editing Markdown file" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
 ;; init.el ends here
