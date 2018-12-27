@@ -26,5 +26,5 @@ encrypt() {
 }
 
 decrypt() {
-  openssl enc -d -aes-256-cbc -in "$1" -out "$1.dec"
+  openssl enc -d -aes-256-cbc -a -salt -in "$1" -out "$1.dec"
 }
